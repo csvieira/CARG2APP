@@ -23,8 +23,8 @@ function calcularAproveitamento() {
 
     // Armazenar os resultados no localStorage
     localStorage.setItem('distancia', distancia);
-    localStorage.setItem('emissaoTotal', emissaoTotal);
-    localStorage.setItem('aproveitamentoCO2', aproveitamentoCO2);
+    localStorage.setItem('emissaoTotal', emissaoTotal.toFixed(2));
+    localStorage.setItem('aproveitamentoCO2', aproveitamentoCO2.toFixed(2));
 
     // Redireciona para a página de resultados
     window.location.href = 'resultado.html';
