@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Calculadora de CO2</title>
+</head>
+<body>
+    <div class="calculadora">
+        <div class="cabecalho">
+            <img src="logo_carg2app.png" alt="Logo" class="logo">
+        </div>
+        <h1 class="titulo">Resultado</h1>
+        
+        <p id="resultado" class="resultado"></p>
+        
+        <button onclick="voltar()">Voltar</button>
+    </div>
+    
+    <script>
+        // Função para voltar para a página inicial
+        function voltar() {
+            window.location.href = 'index.html';
+        }
+
+        // Ler os resultados do localStorage e exibir
+        const distancia = localStorage.getItem('distancia');
+        const emissaoTotal = localStorage.getItem('emissaoTotal');
+        const aproveitamentoCO2 = localStorage.getItem('aproveitamentoCO2');
+
+        const resultado = `
+            Distância Percorrida: ${distancia} km<br>
+            Emissão Total de CO2: ${emissaoTotal} kg<br>
+            Aproveitamento de CO2: ${aproveitamentoCO2} kg
+        `;
+        
+        document.getElementById('resultado').innerHTML = resultado;
+    </script>
+</body>
+</html>
+
+
+
+
